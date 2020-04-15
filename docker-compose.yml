@@ -14,5 +14,7 @@ services:
   server-3:
     build:
       context: server-3
+    volumes:
+      - ./server-3/target:/usr/src/app/target
     ports:
       - "3003:3003"

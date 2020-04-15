@@ -11,6 +11,8 @@ if (cluster.isMaster) {
     console.log(`Worker ${worker.process.pid} died`);
   });
 } else {
+  console.log(`Worker ${process.pid} started`);
+
   let i = 0;
   fastify.get("*", (req, res) => {
     res.send(`Hello world(fastify): ${i++}`);
