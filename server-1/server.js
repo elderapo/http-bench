@@ -16,7 +16,7 @@ if (cluster.isMaster) {
   let i = 0;
   http
     .createServer((_, res) => {
-      res.write(`Hello world(http): ${i++}`);
+      res.write(`Hello world(http): i(${i++}), pid(${process.pid})`);
       return res.end();
     })
     .listen(80);

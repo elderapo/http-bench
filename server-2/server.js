@@ -14,8 +14,8 @@ if (cluster.isMaster) {
   console.log(`Worker ${process.pid} started`);
 
   let i = 0;
-  fastify.get("*", (req, res) => {
-    res.send(`Hello world(fastify): ${i++}`);
+  fastify.get("*", (_, res) => {
+    res.write(`Hello world(fastify): i(${i++}), pid(${process.pid})`);
   });
   fastify.listen(80, "0.0.0.0");
 }
