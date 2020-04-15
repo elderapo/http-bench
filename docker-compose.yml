@@ -1,20 +1,28 @@
 version: "3"
 
 services:
-  server-1:
+  node-default-http:
     build:
       context: server-1
     ports:
       - "3001:80"
-  server-2:
+  node-fastify:
     build:
       context: server-2
     ports:
       - "3002:80"
-  server-3:
+  actix:
     build:
       context: server-3
     volumes:
       - ./server-3/target:/usr/src/app/target
     ports:
       - "3003:3003"
+  apache:
+    image: httpd
+    ports:
+      - "3004:80"
+  tumtum-hell-world:
+    image: tutum/hello-world
+    ports:
+      - "3004:80"
