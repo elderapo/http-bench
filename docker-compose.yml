@@ -6,8 +6,13 @@ services:
       context: server-1
     ports:
       - "3000:80"
-  server-2:
-    build:
-      context: server-2
-    ports:
-      - "3001:80"
+  # server-2:
+  #   build:
+  #     context: server-2
+  #   ports:
+  #     - "3001:80"
+  # server-3:
+  #   build:
+  #     context: server-3/rust-actix-docker
+  #   ports:
+  #     - "3002:80"
