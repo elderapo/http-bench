@@ -11,7 +11,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .service(web::resource("/").to(index))
     })
-    .backlog(1024)
+    // .backlog(1024)
     .bind("0.0.0.0:3003")?
     .run()
     .await
