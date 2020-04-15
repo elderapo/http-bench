@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  server-1:
+    build:
+      context: server-1
+    ports:
+      - "3000:80"
+  server-2:
+    build:
+      context: server-2
+    ports:
+      - "3001:80"
