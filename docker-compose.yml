@@ -25,4 +25,4 @@ services:
   tumtum-hell-world:
     image: tutum/hello-world
     ports:
-      - "3004:80"
+      - "3005:80"
